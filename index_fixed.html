@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Tools App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app">
+    <!-- LOGIN SCREEN -->
+    <section id="screen-login" class="screen active">
+      <div class="card card-auth">
+        <h1>Welcome to <span>AI Tools</span></h1>
+        <p class="muted">Please login to continue</p>
+
+        <form id="loginForm">
+          <label>Username
+            <input type="text" id="email" placeholder="Enter Username" required />
+          </label>
+
+          <label>Password
+            <div class="password-field">
+              <input type="password" id="password" placeholder="Enter Password" required />
+              <button type="button" id="togglePass" aria-label="Show/Hide password">👁️</button>
+            </div>
+          </label>
+
+          <button type="submit" class="btn primary">Login</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CREDITS SCREEN -->
+    <section id="screen-credits" class="screen">
+      <div class="credits-wrap">
+        <div class="logo">✨</div>
+        <p class="label">Created by</p>
+        <h2 class="author">Muhammad Irfan Haider</h2>
+        <button id="btnGetStart" class="btn">Get Start</button>
+      </div>
+    </section>
+
+    <!-- HOME -->
+    <section id="screen-home" class="screen">
+      <header class="topbar">
+        <h3>AI Tools Categories</h3>
+        <div class="actions">
+          <button id="btnLogout" class="icon-btn" title="Logout">⎋</button>
+        </div>
+      </header>
+
+      <div class="grid" id="categoriesGrid"></div>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <button id="goAbout" class="btn small">ℹ️ About</button>
+        <button id="goContact" class="btn small">📞 Contact Us</button>
+        <p class="copy">© 2025 Muhammad Irfan Haider. All rights reserved.</p>
+      </footer>
+    </section>
+
+    <!-- CATEGORY DETAILS -->
+    <section id="screen-category" class="screen">
+      <header class="topbar">
+        <button id="btnBackHome" class="icon-btn" title="Back">←</button>
+        <h3 id="catTitle">Category</h3>
+        <span></span>
+      </header>
+
+      <div id="sitesList" class="list"></div>
+
+      <div class="empty" id="emptyState">
+        <div class="big">🔗</div>
+        <h4>No websites added yet</h4>
+        <p>Send us links, and we will add them here.</p>
+      </div>
+    </section>
+
+    <!-- IN-APP VIEWER -->
+    <div id="viewer" class="viewer hidden" role="dialog" aria-modal="true">
+      <div class="viewer-inner">
+        <div class="viewer-bar">
+          <strong id="viewerTitle">Opening…</strong>
+          <div class="spacer"></div>
+          <a id="viewerOpenNew" class="btn small" target="_blank">Open in new tab</a>
+          <button id="viewerClose" class="icon-btn">✕</button>
+        </div>
+        <iframe id="viewerFrame" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+        <div id="viewerNote" class="viewer-note hidden">
+          Some sites block embedding in iframe. Use the “Open in new tab” button above if content doesn't load.
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SCREEN -->
+    <section id="screen-about" class="screen">
+      <div class="card card-auth">
+        <h2>About</h2>
+        <p>This AI Tools App is created by <strong>Muhammad Irfan Haider</strong>. It provides access to free AI tools in different categories like Ideas, Text to Image, Copywriting, and more.</p>
+        <button id="btnBackFromAbout" class="btn">← Back</button>
+      </div>
+    </section>
+
+    <!-- CONTACT SCREEN -->
+    <section id="screen-contact" class="screen">
+      <div class="card card-auth">
+        <h2>Contact Us</h2>
+        <p>You can reach us at:</p>
+        <p>📧 Email: <a href="mailto:irfanhaider@example.com">irfanhaider@example.com</a></p>
+        <p>📱 WhatsApp: <a href="https://wa.me/923150658934" target="_blank">+92 315 0658934</a></p>
+        <button id="btnBackFromContact" class="btn">← Back</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
